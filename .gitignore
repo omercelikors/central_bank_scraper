@@ -2,3 +2,5 @@ scovenv
 logs
 central_bank_scraper/settings.py
 __pycache__
+test1.py
+test2.py
