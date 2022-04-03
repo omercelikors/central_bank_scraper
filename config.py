@@ -12,7 +12,7 @@ class Config():
 				'start_date' : '01.01.2022',
 				'end_date' : '28.02.2022',
 				'currency_codes' : ['UAH','DKK'],
-				's3_file_name' : 'informative_central_bank_rates',
+				's3_file_name' : 'informative_central_bank_rates.xml',
 			}
 		},
 		# {
@@ -24,7 +24,7 @@ class Config():
 		# 		'start_date' : '01.01.2022',
 		# 		'end_date' : '28.02.2022',
 		# 		'currency_codes' : ['UAH','DKK'],
-		# 		's3_file_name' : 'indicative_central_bank_rates',
+		# 		's3_file_name' : 'indicative_central_bank_rates.xml',
 		# 	}
 		# }
 	]
