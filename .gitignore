@@ -1,3 +1,4 @@
 scovenv
 logs
 central_bank_scraper/settings.py
+__pycache__
