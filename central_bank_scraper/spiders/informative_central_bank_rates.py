@@ -3,7 +3,6 @@ import json
 import logging
 import sys
 from central_bank_scraper.shared_methods import SharedMethods
-from scrapy.selector import Selector
 import xml.etree.ElementTree as ET
 from central_bank_scraper.items import CentralBankScraperItem
 
