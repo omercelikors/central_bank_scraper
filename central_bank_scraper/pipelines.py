@@ -38,15 +38,17 @@ class CentralBankScraperPipeline:
 
 	def close_spider(self, spider):
 		with open(f"{self.base_path_for_xml}{spider.other_datas['s3_file_name']}", "wb") as f:
-			f.write(b''.join(self.all_currencies))
+			joined_currencies = b''.join(self.all_currencies)
+			added_root_currencies = f"{b'<Currencies>'}{joined_currencies}{b'</Currencies>'}"
+			f.write(added_root_currencies)
 		
-		# create_client_result = self.create_s3_bucket_client()
+		create_client_result = self.create_s3_bucket_client()
 
-		# if create_client_result:
-		#     create_s3_bucket_result = self.create_s3_bucket()
+		if create_client_result:
+			create_s3_bucket_result = self.create_s3_bucket()
 		
-		# if create_s3_bucket_result:
-		#     upload_file_result = self.upload_file(spider.other_datas['s3_file_name'])
+		if create_s3_bucket_result:
+			upload_file_result = self.upload_file(spider.other_datas['s3_file_name'])
 		
 		return True
 
